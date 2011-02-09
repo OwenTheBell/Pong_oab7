@@ -1,0 +1,14 @@
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Art\ball.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Art\Blank.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Art\paddleA.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Art\paddleB.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Art\background.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Fonts\defaultFont.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Sound\Beep1.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Sound\Beep2.xnb
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Pong.exe
+E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Pong.pdb
+E:\CODE\290\Pong_oab7\Pong\Pong\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\CODE\290\Pong_oab7\Pong\Pong\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\CODE\290\Pong_oab7\Pong\Pong\obj\x86\Debug\Pong.exe
+E:\CODE\290\Pong_oab7\Pong\Pong\obj\x86\Debug\Pong.pdb
