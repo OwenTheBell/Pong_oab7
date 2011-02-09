@@ -129,7 +129,7 @@ namespace Pong.GameElements
             Drawer.Initiallize();
 
             //screens.Play(new HubWorld(HubWorldConfiguration.Intro));
-            screens.Play(new PongScreen());
+            screens.Play(new MainScreen());
         }
 
         /// <summary>
