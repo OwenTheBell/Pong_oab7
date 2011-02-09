@@ -118,9 +118,11 @@
     <Compile Include="Inputs\ControllerPacket.cs" />
     <Compile Include="Mathematics\RotationHelper.cs" />
     <Compile Include="Mathematics\tfloat.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\MenuAction.cs" />
     <Compile Include="Menus\MenuDelegates\IMenuDelegate.cs" />
+    <Compile Include="Menus\MenuDelegates\PlayGameDelegate.cs" />
     <Compile Include="Menus\MenuDelegates\QuitGameDelegate.cs" />
     <Compile Include="Menus\MenuDelegates\QuitTopDelegate.cs" />
     <Compile Include="Menus\MenuEntry.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rendering\Drawer.cs" />
     <Compile Include="Rendering\TextureStatic.cs" />
+    <Compile Include="Screens\MainScreen.cs" />
     <Compile Include="Screens\PauseScreen.cs" />
     <Compile Include="Screens\PongScreen.cs" />
   </ItemGroup>
