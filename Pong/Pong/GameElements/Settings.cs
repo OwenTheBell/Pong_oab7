@@ -28,7 +28,7 @@ namespace Pong.GameElements
         /// Gets the max paddle speed.
         /// </summary>
         /// <value>The max paddle speed.</value>
-        public static float MaxPaddleSpeed { get { return 3; } }
+        public static float MaxPaddleSpeed { get { return 5; } }
 
         /// <summary>
         /// Gets the left paddle AI.
