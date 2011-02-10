@@ -44,6 +44,7 @@ namespace Pong.PaddleControllers
             // for MoveVertical will return 0 if the joystick is in the rest position
             // or up or down is now
             this.paddle.GoTo(this.paddle.GetPosition() - 100 * GameWorld.controller.ContainsFloat(ActionType.MoveVertical));
+            //this.paddle.GoTo(this.paddle.GetPosition() - 100 * GameWorld.controller.ContainsFloat(ActionType.MoveHorizontal));
         }
     }
 }

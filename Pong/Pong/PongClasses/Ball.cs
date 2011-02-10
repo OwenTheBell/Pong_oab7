@@ -96,14 +96,16 @@ namespace Pong.PongClasses
 
                 if (Math.Abs(this.pongWorld.PaddleLeft.GetPosition() - this.position.Y) <= Paddle.Height / 2f)
                 {
+                    float ballPaddleRelation = (this.position.Y - this.pongWorld.PaddleLeft.GetPosition()) / (Paddle.Height / 2f);
                     // Rotate the velocity if applicable.
                     if (this.pongWorld.UseRoundedPaddles)
                     {
                         float magnitude = velocity.Length();
                         this.velocity = magnitude * RotationHelper.AngleToVector2(
-                            MathHelper.Pi + 
-                            0.4f * (this.position.Y - this.pongWorld.PaddleLeft.GetPosition()) / (Paddle.Height / 2f));
-                        this.velocity.Y += 5 * this.pongWorld.PaddleLeft.GetYSpeed();
+                            MathHelper.Pi +
+                            0.4f * ballPaddleRelation);
+                        //vary the speed imparted to the ball based on where on the paddle it hits
+                        this.velocity.Y += 5 * this.pongWorld.PaddleLeft.GetYSpeed() * (1 + Math.Abs(ballPaddleRelation));
                     }
 
                     this.pongWorld.PaddleLeft.PositiveFeedback(RotationHelper.Vector2ToAngle(
@@ -133,14 +135,16 @@ namespace Pong.PongClasses
 
                 if (Math.Abs(this.pongWorld.PaddleRight.GetPosition() - this.position.Y) <= Paddle.Height / 2f)
                 {
+                    float ballPaddleRelation = (this.position.Y - this.pongWorld.PaddleRight.GetPosition()) / (Paddle.Height / 2f);
                     // Rotate the velocity if applicable.
                     if (this.pongWorld.UseRoundedPaddles)
                     {
                         float magnitude = velocity.Length();
                         this.velocity = magnitude * RotationHelper.AngleToVector2(
                             MathHelper.TwoPi -
-                            0.4f * (this.position.Y - this.pongWorld.PaddleRight.GetPosition()) / (Paddle.Height / 2f));
-                        this.velocity.Y += 5 * this.pongWorld.PaddleRight.GetYSpeed();
+                            0.4f * ballPaddleRelation);
+                        //vary the speed imparted to the ball based on where on the paddle it hits
+                        this.velocity.Y += this.pongWorld.PaddleRight.GetYSpeed() * (1 + Math.Abs(ballPaddleRelation));
                     }
 
                     this.pongWorld.PaddleRight.PositiveFeedback(RotationHelper.Vector2ToAngle(

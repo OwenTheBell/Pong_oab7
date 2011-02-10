@@ -90,7 +90,7 @@ namespace Pong.PongClasses
             this.totalResponces = 0;
             this.isLeftPaddle = isLeft;
             this.position = initialPosition;
-            this.position = initialPosition;
+            this.oldPosition = initialPosition;
             this.target = initialPosition.Y;
             this.pongWorld = pongWorld;
             this.drawOrigin = new Vector2(Width / 2f, Height / 2f);
