@@ -159,6 +159,7 @@ namespace Pong.PongClasses
         public void NegativeFeedback(float ballAngle, float ballPosition)
         {
             this.PreviousStates.Add(new PaddleState(false, this.position.Y, ballAngle, ballPosition));
+            //GameWorld.audio.PlaySound(this.isLeftPaddle ? "beep1" : "beep2", 1.0f, this.isLeftPaddle ? -1.0f : 1.0f, 0.0f);
         }
 
         /// <summary>

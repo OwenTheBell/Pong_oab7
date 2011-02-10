@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Pong.GameElements;
+using Pong.Screens;
 
 namespace Pong.Menus.MenuDelegates
 {
@@ -16,7 +17,8 @@ namespace Pong.Menus.MenuDelegates
 
         public void Run()
         {
-            GameWorld.screens.Play(new GameScreen());
+            GameWorld.screens.KillAll();
+            GameWorld.screens.Play(new PongScreen());
         }
     }
 }
