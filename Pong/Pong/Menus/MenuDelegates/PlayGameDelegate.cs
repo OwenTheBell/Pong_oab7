@@ -17,7 +17,10 @@ namespace Pong.Menus.MenuDelegates
 
         public void Run()
         {
-            GameWorld.screens.KillAll();
+            if (GameWorld.screens.Count > 0)
+            {
+                GameWorld.screens[GameWorld.screens.Count - 1].Disposed = true;
+            }
             GameWorld.screens.Play(new PongScreen());
         }
     }

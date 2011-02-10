@@ -75,6 +75,13 @@ namespace Pong.PongClasses
                 }
             }
 
+
+            //Limit the maximum speed of the ball
+            if (this.velocity.Y > 40) this.velocity.Y = 40;
+            else if (this.velocity.Y < -40) this.velocity.Y = 40;
+            if (this.velocity.X > 40) this.velocity.X = 40;
+            else if (this.velocity.X < -40) this.velocity.X = -40;
+            
             this.position += this.velocity;
 
             // Has it collided with the left paddle?
@@ -96,6 +103,7 @@ namespace Pong.PongClasses
                         this.velocity = magnitude * RotationHelper.AngleToVector2(
                             MathHelper.Pi + 
                             0.4f * (this.position.Y - this.pongWorld.PaddleLeft.GetPosition()) / (Paddle.Height / 2f));
+                        this.velocity.Y += 5 * this.pongWorld.PaddleLeft.GetYSpeed();
                     }
 
                     this.pongWorld.PaddleLeft.PositiveFeedback(RotationHelper.Vector2ToAngle(
@@ -132,6 +140,7 @@ namespace Pong.PongClasses
                         this.velocity = magnitude * RotationHelper.AngleToVector2(
                             MathHelper.TwoPi -
                             0.4f * (this.position.Y - this.pongWorld.PaddleRight.GetPosition()) / (Paddle.Height / 2f));
+                        this.velocity.Y += 5 * this.pongWorld.PaddleRight.GetYSpeed();
                     }
 
                     this.pongWorld.PaddleRight.PositiveFeedback(RotationHelper.Vector2ToAngle(

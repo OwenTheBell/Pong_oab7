@@ -6,3 +6,4 @@ Content\Art\background.xnb
 Content\Fonts\defaultFont.xnb
 Content\Sound\Beep1.xnb
 Content\Sound\Beep2.xnb
+Content\Sound\Beep_SynthTone02.xnb

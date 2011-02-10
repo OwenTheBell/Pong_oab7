@@ -123,6 +123,7 @@ namespace Pong.GameElements
             audio = new AudioManager(this);
             audio.LoadSound("beep1", @"Sound\beep1");
             audio.LoadSound("beep2", @"Sound\beep2");
+            audio.LoadSound("scoreBeep", @"Sound\Beep_SynthTone02");
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);

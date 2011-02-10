@@ -45,6 +45,8 @@ namespace Pong.PongClasses
         /// </summary>
         private Vector2 position;
 
+        private Vector2 oldPosition;
+
         /// <summary>
         /// The current game of pong.
         /// </summary>
@@ -87,6 +89,7 @@ namespace Pong.PongClasses
             this.totalPositiveResponces = 0;
             this.totalResponces = 0;
             this.isLeftPaddle = isLeft;
+            this.position = initialPosition;
             this.position = initialPosition;
             this.target = initialPosition.Y;
             this.pongWorld = pongWorld;
@@ -159,7 +162,7 @@ namespace Pong.PongClasses
         public void NegativeFeedback(float ballAngle, float ballPosition)
         {
             this.PreviousStates.Add(new PaddleState(false, this.position.Y, ballAngle, ballPosition));
-            GameWorld.audio.PlaySound(this.isLeftPaddle ? "beep1" : "beep2", 1.0f, this.isLeftPaddle ? -1.0f : 1.0f, 0.0f);
+            GameWorld.audio.PlaySound("scoreBeep", 1.0f, this.isLeftPaddle ? 0.0f : -1.0f, 0.0f);
         }
 
         /// <summary>
@@ -200,6 +203,7 @@ namespace Pong.PongClasses
         /// <param name="amount">The amount.</param>
         private void MovePaddleUp(float amount)
         {
+            this.oldPosition.Y = this.position.Y;
             this.position.Y -= amount;
         }
 
@@ -209,6 +213,7 @@ namespace Pong.PongClasses
         /// <param name="amount">The amount.</param>
         private void MovePaddleDown(float amount)
         {
+            this.oldPosition.Y = this.position.Y;
             this.position.Y += amount;
         }
 
@@ -226,6 +231,11 @@ namespace Pong.PongClasses
             }
 
             return this.totalPositiveResponces / this.totalResponces;
+        }
+
+        public float GetYSpeed()
+        {
+            return this.position.Y - this.oldPosition.Y;
         }
 
         /// <summary>

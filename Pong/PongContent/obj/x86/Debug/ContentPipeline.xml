@@ -73,6 +73,15 @@
       <Output>E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Sound\Beep2.xnb</Output>
       <Time>2011-02-01T13:10:43.239087-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sound\Beep_SynthTone02.wav</Source>
+      <Name>Sound\Beep_SynthTone02</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\CODE\290\Pong_oab7\Pong\Pong\bin\x86\Debug\Content\Sound\Beep_SynthTone02.xnb</Output>
+      <Time>2011-02-10T00:00:27.7422844-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
